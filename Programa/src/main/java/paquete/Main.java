@@ -1,4 +1,4 @@
-package paquete;
+import javax.management.modelmbean.ModelMBean;
 
 public class Main {
     public static void main(String[] args) {
