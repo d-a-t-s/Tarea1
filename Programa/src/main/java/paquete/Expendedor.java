@@ -1,5 +1,3 @@
-package paquete;
-
 public class Expendedor {
     private Deposito<Producto> coca;
     private Deposito<Producto> sprite;
@@ -33,6 +31,8 @@ public class Expendedor {
         }
         if (cual == TipoProducto.COCACOLA.tipo){
             if(m.getValor() < TipoProducto.COCACOLA.precio){
+                vuelto.addObjeto(m);
+                System.out.println("Vuelto = " + m.getValor());
                 throw new PagoInsuficienteException("PagoInsuficienteException");
             }else{
                 aux = coca.getObjeto();
@@ -40,6 +40,8 @@ public class Expendedor {
             }
         }else if(cual == TipoProducto.SPRITE.tipo){
             if(m.getValor() < TipoProducto.COCACOLA.precio){
+                vuelto.addObjeto(m);
+                System.out.println("Vuelto = " + m.getValor());
                 throw new PagoInsuficienteException("PagoInsuficienteException");
             }else{
                 aux = sprite.getObjeto();
@@ -47,6 +49,8 @@ public class Expendedor {
             }
         }else if(cual == TipoProducto.FANTA.tipo){
             if(m.getValor() < TipoProducto.FANTA.precio){
+                vuelto.addObjeto(m);
+                System.out.println("Vuelto = " + m.getValor());
                 throw new PagoInsuficienteException("PagoInsuficienteException");
             }else{
                 aux = fanta.getObjeto();
@@ -54,6 +58,8 @@ public class Expendedor {
             }
         }else if(cual == TipoProducto.SUPER8.tipo){
             if(m.getValor() < TipoProducto.SUPER8.precio){
+                vuelto.addObjeto(m);
+                System.out.println("Vuelto = " + m.getValor());
                 throw new PagoInsuficienteException("PagoInsuficienteException");
             }else{
                 aux = super8.getObjeto();
@@ -61,6 +67,8 @@ public class Expendedor {
             }
         }else if(cual == TipoProducto.SNICKER.tipo){
             if(m.getValor() < TipoProducto.SNICKER.precio){
+                vuelto.addObjeto(m);
+                System.out.println("Vuelto = " + m.getValor());
                 throw new PagoInsuficienteException("PagoInsuficienteException");
             }else{
                 aux = snicker.getObjeto();
@@ -69,6 +77,7 @@ public class Expendedor {
         }
         if(aux == null){ //Condicional por si el deposito esta vacio o se ingreso un numero de producto incorrecto
             vuelto.addObjeto(m);
+            System.out.println("Vuelto = " + m.getValor());
             throw new NoHayProductoException("NoHayProductoException");
         }
         int n = (m.getValor() - precio)/100;
