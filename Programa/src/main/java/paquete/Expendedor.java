@@ -1,3 +1,5 @@
+package paquete;
+
 public class Expendedor {
     private Deposito<Producto> coca;
     private Deposito<Producto> sprite;
