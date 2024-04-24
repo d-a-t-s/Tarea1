@@ -1,3 +1,6 @@
+/**
+ * La clase Ecpendedor proporciona metodos para realizar compras a una maquina expendedora, y obtener el vuelto si el pago excedio el precio
+ */
 public class Expendedor {
     private Deposito<Producto> coca;
     private Deposito<Producto> sprite;
@@ -5,8 +8,12 @@ public class Expendedor {
     private Deposito<Producto> super8;
     private Deposito<Producto> snicker;
     private Deposito<Moneda> vuelto;
-    //Metodos
-    //Constructor
+
+    /**
+     * Este metodo corresponde al metodo constructor del expendedor y permite la instancia del mismo con un numero de igual de productos en cada deposito
+     *
+     * @param numProductos Almacena el un entero que corresponde al numero del productos inicial con el que se quiere instanciar el expendedor
+     */
     public Expendedor(int numProductos) {
         coca = new Deposito<>(numProductos);
         sprite = new Deposito<>(numProductos);
@@ -22,7 +29,17 @@ public class Expendedor {
             snicker.addObjeto(new Snickers(i + 500));
         }
     }
-    //Comprar
+
+    /**
+     * Este metodo permite la compra de productos al expendedor ingresando el pago y eligiendo que tipo de producto quiere comprar
+     *
+     * @param m Corresponde a la moneda con la que se quiere pagar
+     * @param cual Corresponde a un entero con el que se elige el tipo de producto que se quiere comprar
+     * @return En el caso de que el pago y la eleccion del tipo de producto sea correcta retorna el producto seleccionado
+     * @throws PagoIncorrectoException Excepcion en caso de que se quiera comprar sin moneda (se intenta comprar con moneda null"
+     * @throws PagoInsuficienteException Excepcion en caso de que el pago sea menor al precion del producto
+     * @throws NoHayProductoException Excepcion en caso de que el deposito esté vacío o el se haya ingresado un tipo de producto erroneo
+     */
     public Producto comprarProducto(Moneda m, int cual) throws PagoIncorrectoException, PagoInsuficienteException, NoHayProductoException {
         Producto aux = null;
         int precio = 0;
@@ -75,7 +92,7 @@ public class Expendedor {
                 precio = TipoProducto.SNICKER.precio;
             }
         }
-        if(aux == null){ //Condicional por si el deposito esta vacio o se ingreso un numero de producto incorrecto
+        if(aux == null){
             vuelto.addObjeto(m);
             System.out.println("Vuelto = " + m.getValor());
             throw new NoHayProductoException("NoHayProductoException");
@@ -86,7 +103,11 @@ public class Expendedor {
         }
         return aux;
     }
-    //Vuelto
+
+    /**
+     * Este metodo permite la obtencion del vuelto en caso de que la compra se haya realizado correctamente
+     * @return Retorna una moneda del deposito (en particular retorna el primer elemento del deposito de monedas)
+     */
     public Moneda getVuelto(){
         return vuelto.getObjeto();
     }
