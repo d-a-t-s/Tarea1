@@ -1,3 +1,4 @@
+package paquete;
 /**
  * Esta clase corresponde a la excepcion en el caso de que se intente comprar con una moneda inferior al precion del producto
  */

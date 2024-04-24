@@ -1,3 +1,4 @@
+package paquete;
 /**
  * Esta clase permite permite comprar un producto dado una moneda un entero y una referencia a un expendedor
  */

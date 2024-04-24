@@ -1,3 +1,4 @@
+package paquete;
 /**
  * Esta clase corresponde a la excepcion en el caso de que el tipo de producto ingresado por el usuario sea erroneo o el deposito esté vacio
  */
