@@ -1,23 +1,24 @@
 package paquete;
-/*
-* Clase abstrata Producto representa un Producto genérico.
-* */
+/**
+ * Clase abstrata Producto representa un Producto genérico.
+ */
 public abstract class Producto {
-    /*
-    * Serie del producto
-    * */
+    /**
+     * Serie del producto
+     */
     private int serieProducto;
 
-    /*
-    * Constructor del producto
-    * @param serie Define que serie/codigo tendra el producto
-    * */
+    /**
+     * Constructor del producto
+     * @param serie Define que serie/codigo tendra el producto
+     */
     public Producto (int serie) {
         this.serieProducto = serie;
     }
 
-    /*
-    * Método que nos dirá el producto que hemos comprado
-    * */
+    /**
+     * Metodo abstracto para el producto
+     * @return Nos dirá el sabor del producto que hemos consumido
+     */
     public abstract String sabor();
 }

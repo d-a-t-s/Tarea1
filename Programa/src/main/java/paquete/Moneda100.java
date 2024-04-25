@@ -1,18 +1,19 @@
 package paquete;
-/*
-* Subclase de Moneda
-* */
+/**
+ * Subclase de Moneda
+ */
 public class Moneda100 extends Moneda{
-    /*
-    * Constructor de Moneda100
-    * */
+    /**
+     * Constructor de Moneda100, llama al metodo constructor de la superclase
+     */
     public Moneda100(){
         super();
     }
-    /*
-    * Obtener acceso al valor de la moneda
-    * @return valor de moneda
-    * */
+
+    /**
+     * Obtiene el valor de la moneda
+     * @return Devuelve el valor de la moneda como un entero
+     */
     public int getValor() {
         return 100;
     }
