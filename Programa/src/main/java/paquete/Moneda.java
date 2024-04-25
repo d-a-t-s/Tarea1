@@ -25,7 +25,6 @@ public abstract class Moneda implements Comparable<Moneda>{
     * Devuelve la serie de la moneda (direccion)
     * @return Serie (direccion de la moneda)
     * */
-
     public Moneda getSerie(){
         return this;
     }
