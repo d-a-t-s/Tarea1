@@ -2,7 +2,7 @@ package paquete;
 /*
  * Subclase de Moneda
  * */
-public class Moneda500 {
+public class Moneda500 extends Moneda {
     /*
      * Constructor de Moneda500
      * */
