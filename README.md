@@ -1,4 +1,6 @@
 # Tarea1
 
-### Daniel Alexander Tamara Sierra
+### Daniel Alexander Tamaro Sierra
 ### Jesús David Guevara Salcedo
+
+![UML](UML.png)

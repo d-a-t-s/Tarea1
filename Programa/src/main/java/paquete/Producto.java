@@ -6,7 +6,7 @@ public abstract class Producto {
     /**
      * Serie del producto
      */
-    private int serieProducto;
+    protected int serieProducto;
 
     /**
      * Constructor del producto
